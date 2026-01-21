@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.runtime.*
 import com.example.viikko2.ui.HomeScreen
-import androidx.compose.foundation.layout.*
 
 
 class MainActivity : ComponentActivity() {

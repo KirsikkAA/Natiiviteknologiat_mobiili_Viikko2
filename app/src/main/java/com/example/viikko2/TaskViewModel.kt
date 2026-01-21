@@ -6,7 +6,6 @@ import com.example.viikko2.domain.Task
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import androidx.compose.runtime.*
 
 
 class TaskViewModel : ViewModel() {

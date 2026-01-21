@@ -23,6 +23,12 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+import androidx.compose.foundation.border
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.ui.graphics.Color
+
+
 
 @Composable
 fun HomeScreen(taskViewModel: TaskViewModel = viewModel()) {
@@ -40,12 +46,24 @@ fun HomeScreen(taskViewModel: TaskViewModel = viewModel()) {
         Spacer(modifier = Modifier.height(height = 8.dp))
 
         LazyColumn(modifier = Modifier.weight(1f)) {
+
             items(taskViewModel.tasks) { task ->
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp)
+                        .border(
+                            width = 1.dp,
+                            color = Color.LightGray,
+                            shape = RoundedCornerShape(12.dp)
+                        )
+                ){
                 TaskRow (
                     task = task,
                     onToggle = {taskViewModel.toggleDone(task.id)},
                     onDelete = {taskViewModel.removeTask(task.id)}
                 )
+            }
             }
         }
 
@@ -123,7 +141,7 @@ fun TaskRow(
     onDelete: () -> Unit
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+        modifier = Modifier.fillMaxWidth().padding(4.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -139,7 +157,8 @@ fun TaskRow(
                 Text ("Due: ${task.dueDate}")
             }
         }
-        Button(onClick = onDelete) {
+        Button(
+            onClick = onDelete) {
             Text("Delete")
         }
     }
