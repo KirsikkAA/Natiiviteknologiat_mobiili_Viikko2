@@ -25,4 +25,4 @@
 #### viewModel
 <h>ViewModel on parempi parempi säilyttämään tilan konfiguraatio muutosten (esimerkiksi näytön kääntämisen) yli, kuin pelkkä remember. ViewModel erottaa toimintalogiikan käyttöliittymästä ja se helpottaa ohjelmiston testaamista. Se myös integroituu hyvin muiden Architecture Components -komponenttien kanssa. Remember on parempi hetkittäisille UI-tiloihin, esimerkiksi animaatiotiloihin. </h>
 
-<h>Linkki videoon</h>
+<h>[Linkki videoon](https://youtu.be/HX6WTg3RA7k)</h>
